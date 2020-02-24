@@ -1,0 +1,9 @@
+Testfall: Log in with the wrong credentials [Tags] negative
+
+
+Testfall: Test MyPage [tags] gherkin
+Testfallet är skrivet med en Gherkin-syntax. Testet är ett användningsfall och är utformat med
+hjälp av Gherkin metoden. Fallet går ut på att en användare ska kunna logga in på sidan och nå 
+delen My page på sidan. Testfallet uppfyller kravet angivet under header, lyckad inloggning och 
+visning av My Page angivet under dokumentationen.
+
