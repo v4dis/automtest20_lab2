@@ -11,6 +11,8 @@ ${URL} =    http://rental20.infotiv.net/
 ${SEARCH_TERM} =    ""
 ${EMAIL} =     needtsleep@gmail.com
 ${PASSWORD} =  murre123
+${BAD_EMAIL} =	wrong@as.can.be
+${BAD_PASSWORD} =	ClearlyWrong
 
 *** Test Cases ***
 Load URL
@@ -26,34 +28,20 @@ InputNoValue
 	Verify Page Loaded
 	Click Button Login
 
-Log in wrong credentials
-	[Documentation]		Login to site
-	[Tags]			login
+Log in with the wrong credentials
+	[Documentation]		User logging in with the wrong credentials
+	[Tags]			negative
 	Go To Web Page
 	Verify Page Loaded
-	Enter Email
-	Enter Password
+	Enter Email  ${BAD_EMAIL}
+	Enter Password  ${BAD_PASSWORD}
 	Click Button Login
+	Verify Login Failed
 
-Test My Page
+Test MyPage
 	[Documentation]		Given that user is registered, the user logs in and clicks the My Page button expecting to see their personal page.
-	[Tags]			test_my_page
+	[Tags]			gherkin
 	Given That User Already Registered
 	When User Logs In And Clicks My Page
 	Then The User Expects To See Page
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

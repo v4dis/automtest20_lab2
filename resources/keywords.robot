@@ -19,10 +19,12 @@ Click Button Login
 	Click Button	xpath://button[@id="login"]
 
 Enter Email
-	Input Text	xpath://input[@id="email"]	${EMAIL}
+	[Arguments]	${email}
+	Input Text	xpath://input[@id="email"]	${email}
 
-Enter Password
-	Input Text	xpath://input[@id="password"]	${PASSWORD}
+ENTER PASSWORD
+	[Arguments]	${password}
+	INPUT Text	xpath://input[@id="password"]	${password}
 	 				
 Verify fail
 	Wait Until Page Contains Element	xpath://label[@id="signInError"]
@@ -34,16 +36,20 @@ Click Button Mypage
     	Should Be Equal	    ${title_value}	Mypage	
 
 Verify Login Page Loaded
-       
        Wait Until Page Contains Element 	xpath://label[@id="welcomePhrase"]
+
+Verify Login Failed
+       Wait Until Page Contains Element 	xpath://label[@id="signInError"]
+       ${status_message} = 	Get Text	xpath://label[@id="signInError"]
+       Should Be Equal	 ${status_message}	Wrong e-mail or password 
 
 Given That User Already Registered
 	Go To Web Page	
 	Verify Page Loaded	
 
 When User Logs In And Clicks My Page
-	Enter Email
-	Enter Password
+	Enter Email  ${EMAIL}
+	Enter Password  ${PASSWORD}
 	Click Button Login 
 	Verify Login Page Loaded	
 
