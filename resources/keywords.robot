@@ -28,6 +28,27 @@ Verify fail
 	Wait Until Page Contains Element	xpath://label[@id="signInError"]
 	Should be equal  Get Text  xpath://label[@id="signInError"] 		
 
+Click Button Mypage
+	Click Button	xpath://button[@id="mypage"]
+	${title_value} =	    Get Title
+    	Should Be Equal	    ${title_value}	Mypage	
+
+Verify Login Page Loaded
+       
+       Wait Until Page Contains Element 	xpath://label[@id="welcomePhrase"]
+
+Given That User Already Registered
+	Go To Web Page	
+	Verify Page Loaded	
+
+When User Logs In And Clicks My Page
+	Enter Email
+	Enter Password
+	Click Button Login 
+	Verify Login Page Loaded	
+
+Then The User Expects To See Page
+	Click Button MyPage
 
 
 	

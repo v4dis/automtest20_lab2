@@ -7,10 +7,10 @@ Test Teardown    End Web Test
 
 *** Variables ***
 ${BROWSER} =    firefox
-${URL} =    http://rental19.infotiv.net/
+${URL} =    http://rental20.infotiv.net/
 ${SEARCH_TERM} =    ""
-${EMAIL} =     test@test.test
-${PASSWORD} =  password
+${EMAIL} =     needtsleep@gmail.com
+${PASSWORD} =  murre123
 
 *** Test Cases ***
 Load URL
@@ -35,4 +35,25 @@ Log in wrong credentials
 	Enter Password
 	Click Button Login
 
-Given 
+Test My Page
+	[Documentation]		Given that user is registered, the user logs in and clicks the My Page button expecting to see their personal page.
+	[Tags]			test_my_page
+	Given That User Already Registered
+	When User Logs In And Clicks My Page
+	Then The User Expects To See Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
