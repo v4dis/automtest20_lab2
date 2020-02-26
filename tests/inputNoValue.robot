@@ -15,20 +15,10 @@ ${BAD_EMAIL} =	wrong@as.can.be
 ${BAD_PASSWORD} =	ClearlyWrong
 
 *** Test Cases ***
-Load URL
-    [Documentation]  Laddar sidan
-    [Tags]  Laddar sidan
-    Go To Web Page
-    Verify Page Loaded
 
-Log in with the wrong credentials
-	[Documentation]		User logging in with the wrong credentials
-	[Tags]			negative
+Input No Value
+	[Documentation]		Submit field with no value
+	[Tags]			    submit no value
 	Go To Web Page
 	Verify Page Loaded
-	Enter Email  ${BAD_EMAIL}
-	Enter Password  ${BAD_PASSWORD}
 	Click Button Login
-	Verify Login Failed
-
-
