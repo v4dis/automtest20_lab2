@@ -6,7 +6,7 @@ Test Setup       Begin Web Test
 Test Teardown    End Web Test
 
 *** Variables ***
-${BROWSER} =    firefox
+${BROWSER} =    chrome
 ${URL} =    http://rental20.infotiv.net/
 ${SEARCH_TERM} =    ""
 ${EMAIL} =     needtsleep@gmail.com
