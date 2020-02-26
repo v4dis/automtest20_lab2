@@ -5,6 +5,12 @@ Library          SeleniumLibrary
 Test Setup       Begin Web Test
 Test Teardown    End Web Test
 
+Documentation    Global documentation
+Resource         ../resources/keywords.robot
+Library          SeleniumLibrary
+Test Setup       Begin Web Test
+Test Teardown    End Web Test
+
 *** Variables ***
 ${BROWSER} =    chrome
 ${URL} =    http://rental20.infotiv.net/
