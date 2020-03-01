@@ -13,7 +13,7 @@ delen My page på sidan. Testfallet uppfyller kravet angivet under Header, lycka
 visning av My Page angivet under dokumentationen.
 
 
-Testfall: InputNoValue  [tags] submit_no_value. Test passed.
+Testfall: Input No Value  [tags] submit no value. Test passed.
 Testfallet är ett användningsfall och är utformat för att få ett felmedelande när användaren inte 
 har anget email vid inloggning. Testet utförs med att inget email eller password anges och 
 användaren trycker på login knappen och ett varningsmeddelande anges. Testet uppfyller kravet Header, 
