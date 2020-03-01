@@ -1,7 +1,7 @@
 *** Keywords ***
 Begin Web Test
       Open Browser	about:blank	${BROWSER}
-      Maximize Browser Window
+#      Maximize Browser Window
       Go To Web Page
       Verify Page Loaded
 
