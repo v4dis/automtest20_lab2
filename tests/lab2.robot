@@ -67,10 +67,18 @@ Long test
     Click Button And Verify Page	myPage.php	mypage
     Click Selected Button     show
 #    Set Selenium Speed    1 seconds		
-    Check Page Contains		Order history
+    Check Page Contains		Order
     Click Selected Button     hide
-    Check Page Not Contains		Order history	
+#    Check Page Not Contains		Order	
     Click Element And Verify Page	index.php	logo	
     Book Car
     Log Out
 
+test
+    [Documentation]	Extended test 
+    [Tags]  		test
+    Go To Web Page
+    Verify Page Loaded
+    Enter Email  ${EMAIL}
+    Enter Password  ${PASSWORD}
+    Click Button Login

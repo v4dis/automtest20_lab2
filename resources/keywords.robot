@@ -106,7 +106,7 @@ Click Selected Button
 
 Check Page Contains
 	[Arguments]	${text}
-	Wait Until Page Contains	Order history
+	Wait Until Page Contains	Order
 	Page Should Contain		${text}
 
 Check Page Not Contains
@@ -129,6 +129,7 @@ Book Car
 	Page Should Contain	is now ready for pickup
 	Click Button	xpath://button[@id="mypage"]
 	Page Should Contain	My bookings
-
+	Click Button		xpath://button[@id="unBook1"]
+	Handle Alert
 Log Out
 	Click Button	xpath://button[@id="logout"]
