@@ -60,7 +60,7 @@ Book Car
 	Input Text	xpath://input[@id="start"]	2020-03-03
 	Input Text	xpath://input[@id="end"]	2020-04-03
 	Click Selected Button				continue
-	Wait Until Page Contains Element		xpath://input[@id="bookQ7pass5"]
+	Wait Until Page Contains Element  xpath://input[@id="bookQ7pass5"]
 	Click Element	xpath://*[@id="bookQ7pass5"]
 	Wait Until Page Contains Element  xpath://input[@id="cardNum"]	timeout=12
 	Input Text	xpath://input[@id="cardNum"]	0123456789012345	
