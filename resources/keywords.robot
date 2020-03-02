@@ -57,4 +57,78 @@ Then The User Expects To See Page
 	Click Button MyPage
 
 
-	
+Verify Login Page Warning
+    Element Attribute Value Should Be     xpath://*[@id="email"]  required  true
+
+Delete Date
+    Input Text	    xpath://input[@id="start"]	0000-00-00
+    Click Button    xpath://button[@id="continue"]
+    Element Attribute Value Should Be     xpath://*[@id="start"]  required  true
+
+Click Reset button and go to the next page
+    Click Button    xpath://button[@id="reset"]
+    Click Button    xpath://button[@id="continue"]
+    ${link_text} =	Get Text	id:questionText
+    Should Be Equal	${link_text}	What would you like to drive?
+
+Click Link About
+	Click Link			xpath://a[@id="about"]
+	Location Should Contain		about.php
+
+Click Logo
+	Click Element	xpath://div[@id="logo"]
+	Location Should Contain		index.php
+
+Click Element And Verify Page
+	[Arguments]	${url_should_contain}		${element_id}
+	Click Element	xpath://div[@id="${element_id}"]
+	Location Should Contain		${url_should_contain}
+
+Click Link And Verify Page
+	[Arguments]	${url_should_contain}		${link_id}
+	Click Link	xpath://a[@id="${link_id}"]
+	Location Should Contain		${url_should_contain}
+
+Click Button And Verify Page
+	[Arguments]	${url_should_contain}		${button_id}
+	Click Button	xpath://button[@id="${button_id}"]
+	Location Should Contain		${url_should_contain}
+
+Click Documentation
+       Click Link	xpath://a[@id="linkButton"]
+       Switch Window	locator=NEW
+       Location Should Contain		documentation
+       Close Window
+
+Click Selected Button 
+	[Arguments]	${button_id}
+	Click Button	xpath://button[@id="${button_id}"]
+
+Check Page Contains
+	[Arguments]	${text}
+	Wait Until Page Contains	Order history
+	Page Should Contain		${text}
+
+Check Page Not Contains
+	[Arguments]	${text}
+	Page Should Not Contain		${text}
+
+Book Car
+	Input Text	xpath://input[@id="start"]	2020-03-03
+	Input Text	xpath://input[@id="end"]	2020-04-03
+	Click Selected Button				continue
+	Wait Until Page Contains Element  xpath://input[@id="bookQ7pass7"]  timeout=30
+	Click Element	xpath://*[@id="bookQ7pass7"]
+	Wait Until Page Contains Element  xpath://input[@id="cardNum"]	timeout=12
+	Input Text	xpath://input[@id="cardNum"]	0123456789012345	
+	Input Text	xpath://input[@id="fullName"]	Anonymous Coward
+	Click Element	xpath://*[@id="month3"]
+	Click Element	xpath://*[@id="month2024"]
+	Input Text	xpath://input[@id="cvc"]	123
+	Click Button	xpath://button[@id="confirm"]
+	Page Should Contain	is now ready for pickup
+	Click Button	xpath://button[@id="mypage"]
+	Page Should Contain	My bookings
+
+Log Out
+	Click Button	xpath://button[@id="logout"]
