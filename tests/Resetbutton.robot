@@ -17,6 +17,18 @@ ${BAD_PASSWORD} =	ClearlyWrong
 
 *** Keywords ***
 
+Delete Date
+    Input Text	    xpath://input[@id="start"]	0000-00-00
+    Click Button    xpath://button[@id="continue"]
+    Element Attribute Value Should Be     xpath://*[@id="start"]  required  true
+
+Click Reset button and go to the next page
+    Click Button    xpath://button[@id="reset"]
+    Click Button    xpath://button[@id="continue"]
+    ${link_text} =	Get Text	id:questionText
+    Should Be Equal	${link_text}	What would you like to drive?
+
+
 *** Test Cases ***
 
 Reset button on Date Selection
@@ -24,4 +36,5 @@ Reset button on Date Selection
 	[Tags]			    Reset Button
 	Go To Web Page
 	Verify Page Loaded
-	Click Button Login
+    Delete Date
+    Click reset button and go to the next page

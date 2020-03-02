@@ -23,7 +23,7 @@ Load URL
 
 Log in with the wrong credentials
 	[Documentation]		User logging in with the wrong credentials
-	[Tags]			negative
+	[Tags]			Testfall 1: Negative
 	Go To Web Page
 	Verify Page Loaded
 	Enter Email  ${BAD_EMAIL}
