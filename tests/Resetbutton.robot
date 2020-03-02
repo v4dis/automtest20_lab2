@@ -20,11 +20,7 @@ ${BAD_PASSWORD} =	ClearlyWrong
 Delete Date
     Input Text	    xpath://input[@id="start"]	0000-00-00
     Click Button    xpath://button[@id="continue"]
-    #Wait Until Page Contains Element
-    ${status_message} = 	Get Text	xpath://label[@id="dateSelection"]
-    Should Be Equal	 ${status_message}	Please input a valid date
-    #Wait Until Location Contains	xpath://button[@id="dateSelection" title="Please input a valid date"]
-	#Should be equal  Get Text  xpath://button[@id="start"]
+    Element Attribute Value Should Be     xpath://*[@id="start"]  required  true
 
 Click Reset button and go to the next page
     Click Button    xpath://button[@id="reset"]
