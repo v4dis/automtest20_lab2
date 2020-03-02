@@ -3,10 +3,10 @@ Documentation    Global documentation
 Resource         ../resources/keywords.robot
 Library          SeleniumLibrary
 Test Setup       Begin Web Test
-#Test Teardown    End Web Test
+Test Teardown    End Web Test
 
 *** Variables ***
-${BROWSER} =    chrome
+${BROWSER} =     firefox
 ${URL} =    http://rental20.infotiv.net/
 ${SEARCH_TERM} =    ""
 ${EMAIL} =     needtsleep@gmail.com
@@ -66,19 +66,11 @@ Long test
     Click Element And Verify Page	index.php	logo	
     Click Button And Verify Page	myPage.php	mypage
     Click Selected Button     show
-#    Set Selenium Speed    1 seconds		
     Check Page Contains		Order
     Click Selected Button     hide
 #    Check Page Not Contains		Order	
     Click Element And Verify Page	index.php	logo	
-    Book Car
+#    Set Selenium Speed    1 seconds		
+	    Book Car
     Log Out
 
-test
-    [Documentation]	Extended test 
-    [Tags]  		test
-    Go To Web Page
-    Verify Page Loaded
-    Enter Email  ${EMAIL}
-    Enter Password  ${PASSWORD}
-    Click Button Login
