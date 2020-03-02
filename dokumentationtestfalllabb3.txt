@@ -18,8 +18,21 @@ login knappen och ett varningsmeddelande anges. Testet uppfyller kravet Header,
 ett inloggnings fält lämnas tomt och varningsmeddelande uppkommer i dokumentationen.
 
 
-Testfall 4: Reset button on Date Selection [Tags] Testfall 4: Reset Button
+Testfall 4: Reset button on Date Selection [tags] Testfall 4: Reset Button. Test passed.
 Testfallet är ett användingsfall. Testet är utformat för att användaren inte skall kunna gå vidare i 
-bokningen vid inkorrekt inmatning utan att använda reset knappen. Efter att testet angivit 0 på datum fältet och reset knappen 
-användas användas. för att ge korrekt datum och 
-har använts kan testet gå vidare till sidan vilken bil användaren vill boka.
+bokningen vid inkorrekt inmatning utan att använda reset knappen. Efter att testet angivit 0 på datum
+fältet och användt reset knappen för att ge korrekt datum och kan testet gå vidare till sidan 
+vilken bil användaren vill boka. Testet uppfyller kravet Date selection, reset button kommer att ladda
+om sidan ifall inkorrekt inmatning sker och ett varningsmeddelande kommer fram. Om korrekt data är 
+inmatad kommer användaren kunna gå vidare till val av bil sidan.
+
+Testfall 5: Long test  [Tags] Testfall 5: try buy. Test passed.
+Testfallet är ett användningsfall. Testet är utformat för en användare att logga in, se sidor, boka 
+en bil, avboka en bil och logga ut. Testet uppfyller kraven i Date selection: korrekt input, 
+Car selection: Korrekt input, Confirm booking: Korrekt input, Successful Booking: korrekt input,
+My Page: avboking av bil.
+
+Födelarna vid automatisk testning av denna sida är om man ska kunna göra om samma test många 
+gånger efter till exempel vid uppdateringar av sidan. Alla testen är bra för just uppdateringar av sidor.
+
+Det svåra med labben var git och korrekt datum inmatning beroende på browser.
