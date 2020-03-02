@@ -32,8 +32,8 @@ Click Reset button and go to the next page
 *** Test Cases ***
 
 Reset button on Date Selection
-	[Documentation]		Reset button on date selection should go back to the to date for the test
-	[Tags]			    Reset Button
+	[Documentation]		Reset button on date selection should go back to a correct date after entering 0 in the date.
+	[Tags]			    Testfall 4: Reset Button
 	Go To Web Page
 	Verify Page Loaded
     Delete Date

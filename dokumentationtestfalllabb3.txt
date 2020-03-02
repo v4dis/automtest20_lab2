@@ -1,18 +1,25 @@
 Testfall 1: Log in with the wrong credentials [Tags] Testfall 1: Negative. Test passed.
 Testfallet är ett användningsfall och är utformat för att misslyckas med att logga in. Testet uförs 
 med ett oregistrerat email och lösenord som gör att det inte går att logga in på sidan och ger 
-ett felmeddelande. Testfallet uppfyller kravet angivet under Header, fel information vid inloggning
-och ett felmeddelande i dokumentation.
+ett felmeddelande. Testfallet kontrollerar kravet angivet under Header, fel information vid inloggning
+och ett felmeddelande i kravdokumentationen.
 
 Testfall 2: Test MyPage [tags] Testfall 2: Gherkin Test MyPage. Test passed.
 Testfallet är skrivet med en Gherkin-syntax. Testet är ett användningsfall och är utformat med
 hjälp av Gherkin metoden. Fallet går ut på att en användare ska kunna logga in på sidan och nå 
 delen My page på sidan. Testfallet uppfyller kravet angivet under Header, lyckad inloggning och 
-visning av My Page angivet i dokumentationen.
+visning av My Page angivet i kravdokumentationen.
 
 
 Testfall 3: Input No Value  [tags] Testfall 3: Submit no value. Test passed.
 Testfallet är ett användningsfall och är utformat för att få en varning när användaren inte 
-har anget email vid inloggning. Testet utförs med att inget email eller password anges och 
-användaren trycker på login knappen och ett varningsmeddelande anges. Testet uppfyller kravet Header, 
+har anget email vid inloggning. Testet utförs med att inget email anges och testet går vidare till
+login knappen och ett varningsmeddelande anges. Testet uppfyller kravet Header, 
 ett inloggnings fält lämnas tomt och varningsmeddelande uppkommer i dokumentationen.
+
+
+Testfall 4: Reset button on Date Selection [Tags] Testfall 4: Reset Button
+Testfallet är ett användingsfall. Testet är utformat för att användaren inte skall kunna gå vidare i 
+bokningen vid inkorrekt inmatning utan att använda reset knappen. Efter att testet angivit 0 på datum fältet och reset knappen 
+användas användas. för att ge korrekt datum och 
+har använts kan testet gå vidare till sidan vilken bil användaren vill boka.
