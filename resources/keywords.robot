@@ -18,6 +18,9 @@ Verify Page Loaded
 Click Button Login
 	Click Button	xpath://button[@id="login"]
 
+Verify Login Page Warning
+    Element Attribute Value Should Be     xpath://*[@id="email"]  required  required
+
 Enter Email
 	[Arguments]	${email}
 	Input Text	xpath://input[@id="email"]	${email}
