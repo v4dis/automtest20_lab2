@@ -68,6 +68,7 @@ Delete Date
 Click Reset button and go to the next page
     Click Button    xpath://button[@id="reset"]
     Click Button    xpath://button[@id="continue"]
+    Wait Until Page Contains Element	xpath://h1[@id="questionText"]
     ${link_text} =	Get Text	id:questionText
     Should Be Equal	${link_text}	What would you like to drive?
 

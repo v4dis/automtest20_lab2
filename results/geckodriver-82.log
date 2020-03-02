@@ -1,9 +1,0 @@
-1582990689900	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1582990689918	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1582990689918	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1582990689918	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1582990689918	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1582990690887	Marionette	INFO	Listening on port 43055
-1582990690901	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource:///modules/ProcessHangMonitor.jsm, line 418: TypeError: win.gBrowser is undefined
-1582990692635	Marionette	INFO	Stopped listening on port 43055

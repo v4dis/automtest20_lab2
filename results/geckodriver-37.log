@@ -1,9 +1,0 @@
-1582549178585	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1582549178620	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1582549178620	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1582549178621	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1582549178621	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1582549181004	Marionette	INFO	Listening on port 37127
-1582549181047	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript warning: http://rental20.infotiv.net/webpage/html/gui/myPage.php, line 71: unreachable code after return statement
-1582549183839	Marionette	INFO	Stopped listening on port 37127

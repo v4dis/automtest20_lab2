@@ -1,9 +1,0 @@
-1583169530825	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1583169530864	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1583169530864	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1583169530864	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1583169530864	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1583169533272	Marionette	INFO	Listening on port 43699
-1583169533369	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 551: uncaught exception: undefined
-1583169614544	Marionette	INFO	Stopped listening on port 43699
