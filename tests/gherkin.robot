@@ -18,7 +18,7 @@ ${BAD_PASSWORD} =	ClearlyWrong
 
 Test MyPage
 	[Documentation]		Given that user is registered, the user logs in and clicks the My Page button expecting to see their personal page.
-	[Tags]			    gherkin
+	[Tags]			    Testfall 2: Gherkin Test MyPage
 	Given That User Already Registered
 	When User Logs In And Clicks My Page
 	Then The User Expects To See Page
