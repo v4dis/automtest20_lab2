@@ -24,7 +24,11 @@ ${PHONE} =      5555123456
 # 'Then the user expects to access documentation & Source files' för att köra 
 # Testet 'på riktigt' /Daniel
 
-Given that user is registered and logged in	
+Browse Documentation
+        [Arguments]	${anchor}
+	Click Link	${anchor}
+
+User Is Already Registered And Logged In	
 	Go To Web Page
 	Verify Page Loaded
 	Enter Email	${EMAIL}
@@ -32,26 +36,25 @@ Given that user is registered and logged in
 	Click Button Login
 	Page Should Contain	You are signed in as ${FNAME}
 	
-When the user clicks the about-link
+User Clicks The About-Link
 	Click Element	xpath://a[@id="about"]
 	Wait Until Page Contains	Homepage version:
 
-
-Then the user expects to access documentation & Source files	
+User Expects To Access Documentation & Source Files	
 	Click Element	xpath://a[@id="linkButton"][@href="/webpage/documentation/index.html"]	
 	Switch Window	url:http://rental19.infotiv.net/webpage/html/gui/about.php
 	Switch Window	locator=new
 	Set Window Position	100	100
 	Set Window Size		900	500
 	Page Should Contain	To simply view the homepage
-	Click Link     xpath://a[@href="#line2"]
-	Click Link     xpath://a[@href="#line3"]
-	Click Link     xpath://a[@href="#line4"]
-	Click Link     xpath://a[@href="#line5"]
-	Click Link     xpath://a[@href="#line1"]
-	Click Link     xpath://html/body/div/div/div/div[2]/section[2]/div[1]/div/h2/a
+	Browse Documentation     xpath://a[@href="#line2"]
+	Browse Documentation     xpath://a[@href="#line3"]
+	Browse Documentation     xpath://a[@href="#line4"]
+	Browse Documentation     xpath://a[@href="#line5"]
+	Browse Documentation     xpath://a[@href="#line1"]
+	Browse Documentation     xpath://html/body/div/div/div/div[2]/section[2]/div[1]/div/h2/a
 	Switch Window  url:http://rental19.infotiv.net/webpage/html/gui/about.php
-	Click Element	xpath://a[@id="linkButton"][@href="https://projekt.infotiv.se/projects/itd-car-rental/repository"]
+	Browse Documentation	 xpath://a[@id="linkButton"][@href="https://projekt.infotiv.se/projects/itd-car-rental/repository"]
 	Switch Window	locator=new
 	Set Window Size		900	500
 	Set Window Position	150	150
@@ -62,6 +65,7 @@ Then the user expects to access documentation & Source files
 	Close Window
 	Switch Window	url:http://rental19.infotiv.net/webpage/documentation/index.html
 	Close Window	
+
 
 
 *** Test Cases ***
@@ -127,8 +131,8 @@ Long test
 VG_test
 	[Documentation]		Beteende och acceptansdrivet funktionellt test av website. Användaren loggar in, klickar på 'About' och läser dokumentation och källkod. 
 	[Tags]			VG_test
-	Given that user is registered and logged in
-	When the user clicks the about-link
-	Then the user expects to access documentation & Source files	
+	User Is Already Registered And Logged In
+	User Clicks The About-Link
+	User Expects To Access Documentation & Source Files	
 	
 

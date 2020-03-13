@@ -1,4 +1,4 @@
 *.idea/*
 #*
 .#*
-vg_test.robot
+results/*
